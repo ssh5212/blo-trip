@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #F8EDEB;
+}
+
+body {
+    background-color: #FCD5CE;
+}
+
+footer {
+    background-color: #F8EDEB;
+}
+#carousel-top {
+
+    width: 100%;
+}
+
+
