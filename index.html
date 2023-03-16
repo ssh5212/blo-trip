@@ -21,19 +21,27 @@
             href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
         />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="stylesheet" href="style.css" />
         <link rel="stylesheet" href="index_style.css" />
-        <title>enjoytrip</title>
+
+        <title>Blossom Trip</title>
     </head>
 
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <!-- [S] navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <!-- main logo -->
                 <a
                     class="navbar-brand link-primary fw-bold fs-3"
-                    href="#"
+                    href="./index.html"
                     style="width: 50px"
                 >
                     <img style="width: 100%" src="./img/logo.png" alt="" />
@@ -59,7 +67,7 @@
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="./plan.html"
+                                href="./location.html"
                                 style="display: inline"
                                 >지역별여행지</a
                             >
@@ -69,17 +77,18 @@
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="#"
+                                href="./plan.html"
                                 style="display: inline"
                                 >나의여행계획</a
                             >
                         </li>
+
                         <li class="nav-item py-2">
                             <i class="fi fi-rr-heart ps-3"></i>
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="#"
+                                href="./hotple.html"
                                 style="display: inline"
                                 >핫플자랑하기</a
                             >
@@ -89,7 +98,7 @@
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="#"
+                                href="./board.html"
                                 style="display: inline"
                                 >여행정보공유</a
                             >
@@ -213,7 +222,12 @@
                 <!-- [S] left main content -->
                 <div class="col-lg-7">
                     <div class="content-section-heading text-center">
-                        <h2 class="mb-5">추천 관광명소</h2>
+                        <h2
+                            class="mb-5"
+                            style="font-family: 'Black Han Sans', sans-serif"
+                        >
+                            추천 관광명소
+                        </h2>
                     </div>
                     <div class="row gx-0">
                         <div class="col-md-6">
@@ -410,43 +424,102 @@
             </div>
         </div>
         <!-- [E] main content -->
-
         <!-- [E] content -->
 
+        <div style="height: 77px"></div>
+
         <!-- [S] footer -->
-
-        <footer class="">
-            <div
-                class="container d-flex flex-wrap justify-content-end align-items-center py-3 my-4"
-            >
-                <ul class="nav col-md-12 justify-content-end">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >카페소개</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >개인정보처리방침</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >이용약관</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >오시는길</a
-                        >
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >&copy; SSAFY Corp.</a
-                        >
-                    </li>
-                </ul>
+        <footer class="mt-auto">
+            <div class="container justify-content-end align-items-center my-4">
+                <div class="row">
+                    <div
+                        class="col-lg-1 h-100 text-center text-lg-start my-auto"
+                    >
+                        <a href="#">
+                            <img
+                                class="px-4 px-lg-0"
+                                src="./img/logo-ssafy.png"
+                                alt=""
+                                width="100%"
+                            />
+                        </a>
+                    </div>
+                    <div
+                        class="col-lg-6 h-100 text-center text-lg-start my-auto"
+                    >
+                        <!-- <ul class="list-inline mb-2">
+                            <li class="list-inline-item">
+                                <a href="#!">About</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Contact</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Terms of Use</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Privacy Policy</a>
+                            </li>
+                        </ul> -->
+                        <p class="text-muted small mb-4 mb-lg-0">
+                            대표 : Hi SSAM 주소: 212, Teheran-ro, Gangnam-gu,
+                            Seoul, Republic of Korea <br />
+                            대표번호: 1588-3357 사업자번호 : 123-4567-987
+                        </p>
+                        <p class="text-muted small mb-4 mb-lg-0">
+                            &copy; Blossom Trip 2023. All Rights Reserved.
+                            &nbsp; ⋅ &nbsp; Designed by
+                            <a href="angelplayer.tistory.com">SSH</a> &
+                            <a href="angelplayer.tistory.com">KJH</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-5 h-100 text-center text-lg-end my-auto">
+                        <div class="row">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item me-4">
+                                    <a href="#!">
+                                        <img
+                                            src="./img/logo-samsung.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="#!">
+                                        <img
+                                            src="./img/logo-tour-api.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="#!">
+                                        <img
+                                            src="./img/logo-visited-kor.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="#!">
+                                        <img
+                                            src="./img/logo-mcst.png"
+                                            alt=""
+                                            height="20px"
+                                            style="color: #000"
+                                        />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
         <!-- [E] footer -->
