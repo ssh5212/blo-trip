@@ -4,19 +4,25 @@
 }
 
 nav {
-    background-color: #F8EDEB;
+    background-color: #f8edeb;
 }
 
 body {
-    background-color: #FCD5CE;
+    background-color: #fcd5ce;
 }
 
-footer {
-    background-color: #F8EDEB;
-}
 #carousel-top {
-
     width: 100%;
 }
 
-
+/* body {
+    height : auto;
+    min-height: 1080px;
+    padding-bottom: 70px;
+} */
+footer {
+    background-color: #f8edeb;
+    height: 70px;
+    /* position: relative;
+    transform: translateY(100%); */
+}
