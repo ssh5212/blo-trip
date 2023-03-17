@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="/css/index_style.css" />
 
         <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16">
+        
 
         <title>Blossom Trip</title>
     </head>
@@ -125,9 +126,39 @@
                                             class="dropdown-item"
                                             href="#"
                                             data-bs-toggle="modal"
-                                            data-bs-target="#pollModal"
+                                            data-bs-target="#loginModal"
                                             >로그인</a
                                         >
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#signUpModal"
+                                            >회원가입</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="header_nav_confirm_on" style="display: none">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item dropdown">
+                                <a
+                                    class="nav-link dropdown-toggle"
+                                    href="#"
+                                    role="button"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <i class="fi fi-rr-lock ps-3 fs"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
+                                            >로그아웃</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item" href="#"
@@ -138,10 +169,125 @@
                             </li>
                         </ul>
                     </div>
+
+
                 </div>
             </div>
         </nav>
         <!-- [E] navbar -->
+
+
+        <!-- [S] login modal-->
+        <div 
+            class="modal fade"
+            id="loginModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            <i class="fi fi-rr-lock ps-3 fs">Login</i>
+                        </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="" class="was-validated">
+                            <div class="mb-3 mt-3">
+                                <label for="ID" class="form-label">ID:</label>
+                                <input type="ID" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="pwd" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                              <div class="form-check mb-3">
+                                <label class="form-check-label">
+                                  <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                </label>
+                              </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-secondary">로그인</button>
+                        <button type="button" class="btn btn-outline-secondary">아이디 찾기</button>
+                        <button type="button" class="btn btn-outline-secondary">비밀번호 찾기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [E] login modal-->
+
+        <!-- [S] sign up modal-->
+        <div 
+            class="modal fade"
+            id="signUpModal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            <i class="fi fi-rr-lock ps-3 fs"> Sign Up</i>
+                        </h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="" class="was-validated">
+                            <div class="mb-3 mt-3">
+                                <label for="name" class="form-label">이름:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="ID" class="form-label">ID:</label>
+                                <input type="text" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="pwd" class="form-label">Password:</label>
+                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="pwd check" class="form-label">Password check:</label>
+                                <input type="password" class="form-control" id="pwd check" placeholder="비밀번호 확인" name="pswd check" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Please fill out this field.</div>
+                              </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary">회원가입</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- [E] sign up modal-->
+
 
         <div style="height: 77px"></div>
 
@@ -150,7 +296,7 @@
         <!-- [S] carousel -->
         <div class="text-center position-relative">
             <img
-                src="./img/main-trip-intro.png"
+                src="/img/main-trip-intro.png"
                 alt="carousel-background"
                 id="carousel-top"
             />
@@ -160,28 +306,28 @@
                     class="carousel slide carousel-fade position-absolute top-50 start-50 translate-middle w-75"
                     data-bs-ride="carousel"
                 >
-                    <img src="./img/Transparence.png" class="w-100" alt="" />
+                    <img src="/img/Transparence.png" class="w-100" alt="" />
                     <div class="carousel-inner">
                         <div
                             class="carousel-item active"
                             data-bs-interval="3000"
                         >
                             <img
-                                src="./img/carousel-0.png"
+                                src="/img/carousel-0.png"
                                 class="d-block w-100"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
                             <img
-                                src="./img/carousel-1.png"
+                                src="/img/carousel-1.png"
                                 class="d-block w-100"
                                 alt="..."
                             />
                         </div>
                         <div class="carousel-item" data-bs-interval="3000">
                             <img
-                                src="./img/carousel-2.png"
+                                src="/img/carousel-2.png"
                                 class="d-block w-100"
                                 alt="..."
                             />
