@@ -156,46 +156,26 @@
                 </h2>
                 <hr class="mb-3 mt-0" align="left" style="border: solid 3px brown; width: 50%" />
             </div>
-            <div>
-                <p style="font-family: 'Noto Sans KR', sans-serif; opacity: 75%;">
-                    직접 다녀왔던 여행지 중 좋았던 곳에 대한 정보를 공유해 주세요!</p>          
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th>글번호</th>
-                        <th>제목</th>
-                        <th>작성자</th>
-                        <th>조회수</th>
-                        <th>작성일</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th>2</th>
-                        <th><a href="#">안녕하세요</a></th>
-                        <th>luxicet</th>
-                        <th>3</th>
-                        <th>23.03.17</th>
-                    </tr>
-                    <tr>
-                        <th>1</th>
-                        <th><a href="#">안녕하세요~</a></th>
-                        <th>ssh</th>
-                        <th>8</th>
-                        <th>23.03.17</th>
-                    </tr>
-                    </tbody>
-                </table>
+            <form action="">
+                <div class="mb-3 mt-3">
+                    <label for="name" class="form-label">작성자 ID: </label>
+                    <input type="text" class="form-control" id="writeUser" placeholder="ID를 입력하세요" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">제목: </label>
+                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요" name="title">
+                </div>
+                <div class="mb-3">
+                    <label for="comment" class="form-label">내용:</label>
+                    <textarea class="form-control" rows="5" id="comment" name="text" placeholder="내용을 입력하세요"></textarea>
+                </div>
+            </form>
+            
+            <div class="col text-center">
+                <button type="button" class="btn btn-outline-secondary">글작성</button>
+                <button type="button" class="btn btn-outline-secondary">초기화</button>
             </div>
-            <button type="button" class="btn btn-outline-secondary" style="float:right;">
-                <a href="/template/boardWrite.html">글쓰기</a></button>
-            <div class="d-flex justify-content-center">
-                <ul class="pagination">
-                    <li class="page-ite m"><a class="page-link" href="#">previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">next</a></li>
-                </ul>
-            </div>
+            
         </div>
 
         <!-- [E] content -->
