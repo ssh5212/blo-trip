@@ -21,8 +21,18 @@
             href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
         />
 
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="index_style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@500&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/index_style.css" />
+
+        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16">
+
         <title>Blossom Trip</title>
     </head>
 
@@ -33,10 +43,10 @@
                 <!-- main logo -->
                 <a
                     class="navbar-brand link-primary fw-bold fs-3"
-                    href="#"
+                    href="/index.html"
                     style="width: 50px"
                 >
-                    <img style="width: 100%" src="./img/logo.png" alt="" />
+                    <img style="width: 100%" src="/img/logo.png" alt="" />
                 </a>
                 <button
                     class="navbar-toggler"
@@ -54,43 +64,43 @@
                     id="navbarSupportedContent"
                 >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item py-2">
+                        <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-marker ps-3"></i>
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="./location.html"
+                                href="/template/location.html"
                                 style="display: inline"
                                 >지역별여행지</a
                             >
                         </li>
-                        <li class="nav-item py-2">
+                        <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-calendar ps-3"></i>
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="./plan.html"
+                                href="/template/plan.html"
                                 style="display: inline"
                                 >나의여행계획</a
                             >
                         </li>
 
-                        <li class="nav-item py-2">
+                        <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-heart ps-3"></i>
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="./hotple.html"
+                                href="/template/hotple.html"
                                 style="display: inline"
                                 >핫플자랑하기</a
                             >
                         </li>
-                        <li class="nav-item py-2">
+                        <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-paper-plane ps-3"></i>
                             <a
                                 class="nav-link active ps-0"
                                 aria-current="page"
-                                href="./board.html"
+                                href="/template/board.html"
                                 style="display: inline"
                                 >여행정보공유</a
                             >
@@ -142,34 +152,100 @@
         <!-- [S] footer -->
         <footer class="mt-auto">
             <div class="container justify-content-end align-items-center my-4">
-                <ul class="nav col-md-12 justify-content-end">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >카페소개</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >개인정보처리방침</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >이용약관</a
-                        >
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >오시는길</a
-                        >
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="#" class="nav-link px-2 text-muted"
-                            >&copy; SSAFY Corp.</a
-                        >
-                    </li>
-                </ul>
+                <div class="row">
+                    <div
+                        class="col-lg-1 h-100 text-center text-lg-start my-auto"
+                    >
+                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
+                            target="_blank">
+                            <img
+                                class="px-4 px-lg-0"
+                                src="/img/logo-ssafy.png"
+                                alt=""
+                                width="100%"
+                            />
+                        </a>
+                    </div>
+                    <div
+                        class="col-lg-6 h-100 text-center text-lg-start my-auto"
+                    >
+                        <!-- <ul class="list-inline mb-2">
+                            <li class="list-inline-item">
+                                <a href="#!">About</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Contact</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Terms of Use</a>
+                            </li>
+                            <li class="list-inline-item">⋅</li>
+                            <li class="list-inline-item">
+                                <a href="#!">Privacy Policy</a>
+                            </li>
+                        </ul> -->
+                        <p class="text-muted small mb-4 mb-lg-0">
+                            대표 : KJH 주소: 98-39, Dongseo-daero, Yuseong-gu,
+                            Daejeon, Republic of Korea <br />
+                            대표번호: 1588-3357 사업자번호 : 123-4567-987
+                        </p>
+                        <p class="text-muted small mb-4 mb-lg-0">
+                            &copy; Blossom Trip 2023. All Rights Reserved.
+                            &nbsp; ⋅ &nbsp; Designed by
+                            <a href="https://angelplayer.tistory.com">SSH</a> &
+                            <a href="https://github.com/Holdm2t1ght">KJH</a>
+                        </p>
+                    </div>
+                    <div class="col-lg-5 h-100 text-center text-lg-end my-auto">
+                        <div class="row">
+                            <ul class="list-inline mb-0">
+                                <li class="list-inline-item me-4">
+                                    <a href="https://www.samsung.com/sec/"
+                                        target="_blank">
+                                        <img
+                                            src="/img/logo-samsung.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://api.visitkorea.or.kr/#/"
+                                        target="_blank">
+                                        <img
+                                            src="/img/logo-tour-api.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://kto.visitkorea.or.kr/kor.kto"
+                                        target="_blank">
+                                        <img
+                                            src="/img/logo-visited-kor.png"
+                                            alt=""
+                                            height="20px"
+                                        />
+                                    </a>
+                                </li>
+                                <li class="list-inline-item me-4">
+                                    <a href="https://www.mcst.go.kr/kor/main.jsp"
+                                        target="_blank">
+                                        <img
+                                            src="/img/logo-mcst.png"
+                                            alt=""
+                                            height="20px"
+                                            style="color: #000"
+                                        />
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </footer>
         <!-- [E] footer -->
