@@ -156,25 +156,32 @@
                 </h2>
                 <hr class="mb-3 mt-0" align="left" style="border: solid 3px brown; width: 50%" />
             </div>
-            <form action="">
-                <div class="mb-3 mt-3">
-                    <label for="name" class="form-label">작성자 ID: </label>
-                    <input type="text" class="form-control" id="writeUser" placeholder="ID를 입력하세요" name="name">
-                </div>
-                <div class="mb-3">
-                    <label for="name" class="form-label">제목: </label>
-                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요" name="title">
-                </div>
-                <div class="mb-3">
-                    <label for="comment" class="form-label">내용:</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text" placeholder="내용을 입력하세요"></textarea>
-                </div>
-            </form>
-            
-            <div class="col text-center">
-                <button type="button" class="btn btn-outline-secondary">
-                    <a href="/template/boardResult.html">글작성</a></button>
-                <button type="button" class="btn btn-outline-secondary">초기화</button>
+            <div style="width: 100%; height:auto; border: 3px solid #ffb5a7; border-radius:10px;" class="text-center">
+                <h2
+                    style="font-family: 'Noto Sans KR', sans-serif; color: #6c584c; opacity: 75%; font-size: 40px"
+                    class="m-0 mt-3"
+                >
+                    등록 완료!!!
+                </h2>
+                <p style="font-family: 'Noto Sans KR', sans-serif; opacity: 75%; font-size:15px;"
+                class="m-0 mt-5">
+                    글 작성이 완료되었습니다.
+                </p>
+                <button type="button" class="btn btn-outline-secondary m-0 mt-4 mb-3">작성글 보기</button>
+            </div>
+            <div style="width: 100%; height:auto; border: 3px solid #ffb5a7; border-radius:10px;" class="text-center mt-2">
+                <h2
+                    style="font-family: 'Noto Sans KR', sans-serif; color: #6c584c; opacity: 75%; font-size: 40px"
+                    class="m-0 mt-3"
+                >
+                    등록 실패T.T
+                </h2>
+                <p style="font-family: 'Noto Sans KR', sans-serif; opacity: 75%; font-size:15px;"
+                class="m-0 mt-5">
+                    글 작성에 문제가 있습니다<br>
+                    잠시 후 다시 시도해 주세요.
+                </p>
+                <button type="button" class="btn btn-outline-secondary m-0 mt-4 mb-3">글목록 페이지 이동</button>
             </div>
             
         </div>
