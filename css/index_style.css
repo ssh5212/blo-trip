@@ -64,3 +64,8 @@
         clip-path: inset(2rem);
     }
 }
+@media (max-width: 768px) {
+    .table_riches {
+        display: none;
+    }
+}

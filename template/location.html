@@ -31,7 +31,10 @@
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/index_style.css" />
 
-        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16">
+        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16" />
+
+        <!-- Serveice Key Save -->
+        <script src="/js/key.js"></script>
 
         <title>Blossom Trip</title>
     </head>
@@ -59,10 +62,7 @@
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div
-                    class="collapse navbar-collapse"
-                    id="navbarSupportedContent"
-                >
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-marker ps-3"></i>
@@ -130,9 +130,7 @@
                                         >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
-                                            >회원가입</a
-                                        >
+                                        <a class="dropdown-item" href="#">회원가입</a>
                                     </li>
                                 </ul>
                             </li>
@@ -147,23 +145,69 @@
 
         <!-- [S] content -->
         <div class="container">
-            
+            <div>
+                <h2
+                    style="font-family: 'Black Han Sans', sans-serif; opacity: 75%; font-size: 50px"
+                    class="m-0 mt-5"
+                >
+                    관광 명소 검색
+                </h2>
+                <hr class="mb-3 mt-0" align="left" style="border: solid 3px brown; width: 50%" />
+            </div>
+            <!-- [S] 관광지 검색 -->
+            <form class="d-flex my-3" onsubmit="return false;" role="search">
+                <select id="search-area" class="form-select me-2">
+                    <option value="0" selected>검색 할 지역 선택</option>
+                </select>
+                <select id="search-content-id" class="form-select me-2">
+                    <option value="0" selected>관광지 유형</option>
+                    <option value="12">관광지</option>
+                    <option value="14">문화시설</option>
+                    <option value="15">축제공연행사</option>
+                    <option value="25">여행코스</option>
+                    <option value="28">레포츠</option>
+                    <option value="32">숙박</option>
+                    <option value="38">쇼핑</option>
+                    <option value="39">음식점</option>
+                </select>
+                <input
+                    id="search-keyword"
+                    class="form-control me-2"
+                    type="search"
+                    placeholder="검색어"
+                    aria-label="검색어"
+                />
+                <button id="btn-search" class="btn btn-outline-success" type="button">검색</button>
+            </form>
+            <!-- kakao map start -->
+            <div id="map" style="width: 100%; height: 400px"></div>
+            <!-- kakao map end -->
+            <div class="row">
+                <table class="table table-striped mt-5" style="display: none">
+                    <thead>
+                        <tr>
+                            <th>대표이미지</th>
+                            <th>관광지명</th>
+                            <th>주소</th>
+                            <th class="table_riches">위도</th>
+                            <th class="table_riches">경도</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trip-list"></tbody>
+                </table>
+            </div>
+            <!-- [E] 관광지 검색 -->
 
+            <div id="nav_blank" style="height: 77px"></div>
         </div>
-
-
-
         <!-- [E] content -->
 
         <!-- [S] footer -->
         <footer class="mt-auto">
             <div class="container justify-content-end align-items-center my-4">
                 <div class="row">
-                    <div
-                        class="col-lg-1 h-100 text-center text-lg-start my-auto"
-                    >
-                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
-                            target="_blank">
+                    <div class="col-lg-1 h-100 text-center text-lg-start my-auto">
+                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank">
                             <img
                                 class="px-4 px-lg-0"
                                 src="/img/logo-ssafy.png"
@@ -172,34 +216,15 @@
                             />
                         </a>
                     </div>
-                    <div
-                        class="col-lg-6 h-100 text-center text-lg-start my-auto"
-                    >
-                        <!-- <ul class="list-inline mb-2">
-                            <li class="list-inline-item">
-                                <a href="#!">About</a>
-                            </li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item">
-                                <a href="#!">Contact</a>
-                            </li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item">
-                                <a href="#!">Terms of Use</a>
-                            </li>
-                            <li class="list-inline-item">⋅</li>
-                            <li class="list-inline-item">
-                                <a href="#!">Privacy Policy</a>
-                            </li>
-                        </ul> -->
+                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
                         <p class="text-muted small mb-4 mb-lg-0">
-                            대표 : KJH 주소: 98-39, Dongseo-daero, Yuseong-gu,
-                            Daejeon, Republic of Korea <br />
+                            대표 : KJH 주소: 98-39, Dongseo-daero, Yuseong-gu, Daejeon, Republic of
+                            Korea <br />
                             대표번호: 1588-3357 사업자번호 : 123-4567-987
                         </p>
                         <p class="text-muted small mb-4 mb-lg-0">
-                            &copy; Blossom Trip 2023. All Rights Reserved.
-                            &nbsp; ⋅ &nbsp; Designed by
+                            &copy; Blossom Trip 2023. All Rights Reserved. &nbsp; ⋅ &nbsp; Designed
+                            by
                             <a href="https://angelplayer.tistory.com">SSH</a> &
                             <a href="https://github.com/Holdm2t1ght">KJH</a>
                         </p>
@@ -208,38 +233,22 @@
                         <div class="row">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.samsung.com/sec/"
-                                        target="_blank">
-                                        <img
-                                            src="/img/logo-samsung.png"
-                                            alt=""
-                                            height="20px"
-                                        />
+                                    <a href="https://www.samsung.com/sec/" target="_blank">
+                                        <img src="/img/logo-samsung.png" alt="" height="20px" />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://api.visitkorea.or.kr/#/"
-                                        target="_blank">
-                                        <img
-                                            src="/img/logo-tour-api.png"
-                                            alt=""
-                                            height="20px"
-                                        />
+                                    <a href="https://api.visitkorea.or.kr/#/" target="_blank">
+                                        <img src="/img/logo-tour-api.png" alt="" height="20px" />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://kto.visitkorea.or.kr/kor.kto"
-                                        target="_blank">
-                                        <img
-                                            src="/img/logo-visited-kor.png"
-                                            alt=""
-                                            height="20px"
-                                        />
+                                    <a href="https://kto.visitkorea.or.kr/kor.kto" target="_blank">
+                                        <img src="/img/logo-visited-kor.png" alt="" height="20px" />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.mcst.go.kr/kor/main.jsp"
-                                        target="_blank">
+                                    <a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank">
                                         <img
                                             src="/img/logo-mcst.png"
                                             alt=""
@@ -261,5 +270,126 @@
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"
         ></script>
+
+        <!-- [S] Kakao Map Script -->
+        <script
+            type="text/javascript"
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3026af170fa563615090f86740747826&libraries=services,clusterer,drawing"
+        ></script>
+        <script>
+            // 로딩 후 전국의 시도 코드 확인
+            let areaUrl =
+                "https://apis.data.go.kr/B551011/KorService1/areaCode1?serviceKey=" +
+                serviceKey +
+                "&numOfRows=20&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json";
+
+            fetch(areaUrl)
+                .then((response) => response.json())
+                .then((data) => makeOption(data));
+
+            // 시도 코드에 따라 search-area에 출력
+            function makeOption(data) {
+                let areas = data.response.body.items.item;
+                // console.log(areas);
+                let sel = document.getElementById("search-area");
+                areas.forEach((area) => {
+                    let opt = document.createElement("option");
+                    opt.setAttribute("value", area.code);
+                    opt.appendChild(document.createTextNode(area.name));
+
+                    sel.appendChild(opt);
+                });
+            }
+
+            // 검색 버튼을 누르면..
+            // 지역, 유형, 검색어 얻기.
+            // 위 데이터를 가지고 공공데이터에 요청.
+            // 받은 데이터를 이용하여 화면 구성.
+            document.getElementById("btn-search").addEventListener("click", () => {
+                let searchUrl = `https://apis.data.go.kr/B551011/KorService1/searchKeyword1?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A`;
+
+                let areaCode = document.getElementById("search-area").value;
+                let contentTypeId = document.getElementById("search-content-id").value;
+                let keyword = document.getElementById("search-keyword").value;
+
+                if (parseInt(areaCode)) searchUrl += `&areaCode=${areaCode}`;
+                if (parseInt(contentTypeId)) searchUrl += `&contentTypeId=${contentTypeId}`;
+                if (!keyword) {
+                    alert("검색어 입력 필수!!!");
+                    return;
+                } else searchUrl += `&keyword=${keyword}`;
+
+                fetch(searchUrl)
+                    .then((response) => response.json())
+                    .then((data) => makeList(data));
+            });
+
+            var positions; // marker 배열.
+            function makeList(data) {
+                document.querySelector("table").setAttribute("style", "display: ;");
+                let trips = data.response.body.items.item;
+                let tripList = ``;
+                positions = [];
+                trips.forEach((area) => {
+                    tripList += `
+              <tr onclick="moveCenter(${area.mapy}, ${area.mapx});">
+                <td><img src="${area.firstimage}" width="100px"></td>
+                <td>${area.title}</td>
+                <td>${area.addr1} ${area.addr2}</td>
+                <td class="table_riches">${area.mapy}</td>
+                <td class="table_riches">${area.mapx}</td>
+              </tr>
+            `;
+
+                    let markerInfo = {
+                        title: area.title,
+                        latlng: new kakao.maps.LatLng(area.mapy, area.mapx),
+                    };
+                    positions.push(markerInfo);
+                });
+                document.getElementById("trip-list").innerHTML = tripList;
+                displayMarker();
+            }
+
+            // 카카오지도
+            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+                mapOption = {
+                    center: new kakao.maps.LatLng(37.500613, 127.036431), // 지도의 중심좌표
+                    level: 5, // 지도의 확대 레벨
+                };
+
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption);
+
+            function displayMarker() {
+                // 마커 이미지의 이미지 주소입니다
+                var imageSrc =
+                    "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+
+                for (var i = 0; i < positions.length; i++) {
+                    // 마커 이미지의 이미지 크기 입니다
+                    var imageSize = new kakao.maps.Size(24, 35);
+
+                    // 마커 이미지를 생성합니다
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
+                    // 마커를 생성합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map, // 마커를 표시할 지도
+                        position: positions[i].latlng, // 마커를 표시할 위치
+                        title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                        image: markerImage, // 마커 이미지
+                    });
+                }
+
+                // 첫번째 검색 정보를 이용하여 지도 중심을 이동 시킵니다
+                map.setCenter(positions[0].latlng);
+            }
+
+            function moveCenter(lat, lng) {
+                map.setCenter(new kakao.maps.LatLng(lat, lng));
+            }
+        </script>
+        <!-- [E] Kakao Map Script -->
     </body>
 </html>
