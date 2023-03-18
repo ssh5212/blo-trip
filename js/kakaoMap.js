@@ -70,7 +70,7 @@ function displayMarker() {
 
     for (var i = 0; i < positions.length; i++) {
         let position_name = positions[i].title;
-        let position_address = positions[i].addr1;
+        let position_address = positions[i].addr;
         let position_image = positions[i].image;
         // 마커 이미지의 이미지 크기 입니다
         var imageSize = new kakao.maps.Size(24, 24);
