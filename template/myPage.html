@@ -196,190 +196,201 @@
                     >
                         <ul class="navbar-nav">
                             <li class="nav-item" style="margin-inline: 70px">
-                                <a href='javascript:void(0);' onclick="javascript:goModify();" class="nav-link active"
+                                <a
+                                    href="javascript:void(0);"
+                                    onclick="javascript:goModify();"
+                                    class="nav-link active"
                                     >회원 정보 수정</a
                                 >
                             </li>
                             <li class="nav-item" style="margin-inline: 70px">
-                                <a href='javascript:void(0);' onclick="javascript:goDelete();" class="nav-link active"
+                                <a
+                                    href="javascript:void(0);"
+                                    onclick="javascript:goDelete();"
+                                    class="nav-link active"
                                     >회원 탈퇴</a
                                 >
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div style="display: contents" id="modifyContents">
-                    <form action="" style="text-align: left;">
-                        <h2
-                            style="
-                                font-family: 'Black Han Sans', sans-serif;
-                                opacity: 75%;
-                                font-size: 20px;
-                                text-align: left;
-                            "
-                            class="m-0 mt-4"
-                        >
-                            회원 정보 수정
-                        </h2>
-                        <hr
-                            class="mb-3 mt-0"
-                            align="left"
-                            style="
-                                border: solid 2px #ffb5a7;
-                                width: 30%;
-                                opacity: 100%;
-                            "
-                        />
-                        <div class="mb-3 mt-3">
-                            <label for="name" class="form-label"
-                                >이름:</label
+
+                <div id="modifyContents">
+                    <form action="" style="text-align: left">
+                        <div class="m-5">
+                            <h2
+                                style="
+                                    font-family: 'Black Han Sans', sans-serif;
+                                    opacity: 75%;
+                                    font-size: 20px;
+                                    text-align: left;
+                                "
+                                class="m-0 mt-4"
                             >
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="name"
-                                placeholder="Enter name"
-                                name="name"
+                                회원 정보 수정
+                            </h2>
+                            <hr
+                                class="mb-3 mt-0"
+                                align="left"
+                                style="
+                                    border: solid 2px #ffb5a7;
+                                    width: 30%;
+                                    opacity: 100%;
+                                "
                             />
-                        </div>
-                        <div class="mb-3">
-                            <label for="ID" class="form-label">ID:</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="ID"
-                                placeholder="Enter ID"
-                                name="ID"
-                            />
-                        </div>
-                        <div class="mb-3">
-                            <label for="pwd" class="form-label"
-                                >Password:</label
-                            >
-                            <input
-                                type="password"
-                                class="form-control"
-                                id="pwd"
-                                placeholder="Enter password"
-                                name="pswd"
-                            />
-                        </div>
-                        <div class="mb-3">
-                            <label for="pwd check" class="form-label"
-                                >Password check:</label
-                            >
-                            <input
-                                type="password"
-                                class="form-control"
-                                id="pwd check"
-                                placeholder="비밀번호 확인"
-                                name="pswd check"
-                            />
-                        </div>
-                        <div class="form-row align-items-center">
-                            <div class="col-sm-10 my-1">
-                                <label class="form-label" for="email id"
-                                    >Email:</label
+                            <div class="mb-3 mt-3">
+                                <label for="name" class="form-label"
+                                    >이름:</label
                                 >
-                                <div class="input-group">
-                                    <input
-                                        type="text"
-                                        class="form-control"
-                                        id="email id"
-                                        placeholder="이메일 아이디"
-                                    />
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            @
-                                        </div>
-                                    </div>
-                                    <select
-                                        id="domain"
-                                        class="form-control"
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter name"
+                                    name="name"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="ID" class="form-label">ID:</label>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="ID"
+                                    placeholder="Enter ID"
+                                    name="ID"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label"
+                                    >Password:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd"
+                                    placeholder="Enter password"
+                                    name="pswd"
+                                />
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd check" class="form-label"
+                                    >Password check:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd check"
+                                    placeholder="비밀번호 확인"
+                                    name="pswd check"
+                                />
+                            </div>
+                            <div class="form-row align-items-center">
+                                <div class="col-sm-10 my-1">
+                                    <label class="form-label" for="email id"
+                                        >Email:</label
                                     >
-                                        <option selected>
-                                            도메인 선택
-                                        </option>
-                                        <option value="naver">
-                                            naver.com
-                                        </option>
-                                        <option value="google">
-                                            gmail.com
-                                        </option>
-                                        <option value="daum">
-                                            daum.net
-                                        </option>
-                                        <div class="valid-feedback">
-                                            Valid.
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="email id"
+                                            placeholder="이메일 아이디"
+                                        />
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                @
+                                            </div>
                                         </div>
-                                    </select>
+                                        <select
+                                            id="domain"
+                                            class="form-control"
+                                        >
+                                            <option selected>
+                                                도메인 선택
+                                            </option>
+                                            <option value="naver">
+                                                naver.com
+                                            </option>
+                                            <option value="google">
+                                                gmail.com
+                                            </option>
+                                            <option value="daum">
+                                                daum.net
+                                            </option>
+                                            <div class="valid-feedback">
+                                                Valid.
+                                            </div>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div style="text-align: center;">
-                            <button
-                            type="button"
-                            class="btn btn-outline-secondary m-0 mt-4 mb-3"
-                        >
-                            수정
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-outline-secondary m-0 mt-4 mb-3"
-                        >
-                            취소
-                        </button>
+                            <div style="text-align: center">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-secondary m-0 mt-4 mb-3"
+                                >
+                                    수정
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-secondary m-0 mt-4 mb-3"
+                                >
+                                    취소
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
                 <div style="display: none" id="removeId">
-                    <form action="" style="text-align: left;">
-                        <h2
-                            style="
-                                font-family: 'Black Han Sans', sans-serif;
-                                opacity: 75%;
-                                font-size: 20px;
-                                text-align: left;
-                            "
-                            class="m-0 mt-4"
-                        >
-                            회원 탈퇴
-                        </h2>
-                        <hr
-                            class="mb-3 mt-0"
-                            align="left"
-                            style="
-                                border: solid 2px #ffb5a7;
-                                width: 30%;
-                                opacity: 100%;
-                            "
-                        />
-                        <div class="mb-3">
-                            <label for="pwd check" class="form-label"
-                                >Password check:</label
+                    <form action="" style="text-align: left">
+                        <div class="m-5">
+                            <h2
+                                style="
+                                    font-family: 'Black Han Sans', sans-serif;
+                                    opacity: 75%;
+                                    font-size: 20px;
+                                    text-align: left;
+                                "
+                                class="m-0 mt-4"
                             >
-                            <input
-                                type="password"
-                                class="form-control"
-                                id="pwd check"
-                                placeholder="비밀번호 확인"
-                                name="pswd check"
+                                회원 탈퇴
+                            </h2>
+                            <hr
+                                class="mb-3 mt-0"
+                                align="left"
+                                style="
+                                    border: solid 2px #ffb5a7;
+                                    width: 30%;
+                                    opacity: 100%;
+                                "
                             />
-                        </div>
+                            <div class="mb-3">
+                                <label for="pwd check" class="form-label"
+                                    >Password check:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd check"
+                                    placeholder="비밀번호 확인"
+                                    name="pswd check"
+                                />
+                            </div>
 
-                        <div style="text-align: center;">
-                            <button
-                            type="button"
-                            class="btn btn-outline-secondary m-0 mt-4 mb-3"
-                        >
-                            탈퇴
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-outline-secondary m-0 mt-4 mb-3"
-                        >
-                            취소
-                        </button>
+                            <div style="text-align: center">
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-secondary m-0 mt-4 mb-3"
+                                >
+                                    탈퇴
+                                </button>
+                                <button
+                                    type="button"
+                                    class="btn btn-outline-secondary m-0 mt-4 mb-3"
+                                >
+                                    취소
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -510,9 +521,6 @@
             integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
             crossorigin="anonymous"
         ></script>
-        <script
-            src="/js/data.js"
-        >
-        </script>
+        <script src="/js/data.js"></script>
     </body>
 </html>
