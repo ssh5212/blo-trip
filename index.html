@@ -31,8 +31,12 @@
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/index_style.css" />
 
-        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16">
-        
+        <link
+            rel="icon"
+            href="/img/logo.ico"
+            type="image/x-icon"
+            sizes="16x16"
+        />
 
         <title>Blossom Trip</title>
     </head>
@@ -131,7 +135,9 @@
                                         >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#"
+                                        <a
+                                            class="dropdown-item"
+                                            href="#"
                                             data-bs-toggle="modal"
                                             data-bs-target="#signUpModal"
                                             >회원가입</a
@@ -155,13 +161,14 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a
-                                            class="dropdown-item"
-                                            href="#"
-                                            >로그아웃</a>
+                                        <a class="dropdown-item" href="#"
+                                            >로그아웃</a
+                                        >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="/template/myPage.html"
+                                        <a
+                                            class="dropdown-item"
+                                            href="/template/myPage.html"
                                             >마이 페이지</a
                                         >
                                     </li>
@@ -169,23 +176,21 @@
                             </li>
                         </ul>
                     </div>
-
-
                 </div>
             </div>
         </nav>
         <!-- [E] navbar -->
 
-
         <!-- [S] login modal-->
-        <div 
+        <div
             class="modal fade"
             id="loginModal"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
             aria-labelledby="staticBackdropLabel"
-            aria-hidden="true">
+            aria-hidden="true"
+        >
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <!-- Modal Header -->
@@ -193,7 +198,11 @@
                         <h4 class="modal-title">
                             <i class="fi fi-rr-lock ps-3 fs">Login</i>
                         </h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
                     </div>
 
                     <!-- Modal Body -->
@@ -201,29 +210,60 @@
                         <form action="" class="was-validated">
                             <div class="mb-3 mt-3">
                                 <label for="ID" class="form-label">ID:</label>
-                                <input type="ID" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+                                <input
+                                    type="ID"
+                                    class="form-control"
+                                    id="ID"
+                                    placeholder="Enter ID"
+                                    name="ID"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="mb-3">
-                                <label for="pwd" class="form-label">Password:</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label"
+                                    >Password:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd"
+                                    placeholder="Enter password"
+                                    name="pswd"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="form-check mb-3">
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="form-check mb-3">
                                 <label class="form-check-label">
-                                  <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="remember"
+                                    />
+                                    Remember me
                                 </label>
-                              </div>
+                            </div>
                         </form>
                     </div>
 
                     <!-- Modal Footer -->
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-outline-secondary">로그인</button>
-                        <button type="button" class="btn btn-outline-secondary">아이디 찾기</button>
-                        <button type="button" class="btn btn-outline-secondary">비밀번호 찾기</button>
+                        <button type="submit" class="btn btn-outline-secondary">
+                            로그인
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                            아이디 찾기
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary">
+                            비밀번호 찾기
+                        </button>
                     </div>
                 </div>
             </div>
@@ -231,14 +271,15 @@
         <!-- [E] login modal-->
 
         <!-- [S] sign up modal-->
-        <div 
+        <div
             class="modal fade"
             id="signUpModal"
             data-bs-backdrop="static"
             data-bs-keyboard="false"
             tabindex="-1"
             aria-labelledby="staticBackdropLabel"
-            aria-hidden="true">
+            aria-hidden="true"
+        >
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <!-- Modal Header -->
@@ -246,66 +287,152 @@
                         <h4 class="modal-title">
                             <i class="fi fi-rr-lock ps-3 fs"> Sign Up</i>
                         </h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
                     </div>
 
                     <!-- Modal Body -->
                     <div class="modal-body">
                         <form action="" class="was-validated">
                             <div class="mb-3 mt-3">
-                                <label for="name" class="form-label">이름:</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+                                <label for="name" class="form-label"
+                                    >이름:</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="name"
+                                    placeholder="Enter name"
+                                    name="name"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="mb-3">
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="mb-3">
                                 <label for="ID" class="form-label">ID:</label>
-                                <input type="text" class="form-control" id="ID" placeholder="Enter ID" name="ID" required>
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="ID"
+                                    placeholder="Enter ID"
+                                    name="ID"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="mb-3">
-                                <label for="pwd" class="form-label">Password:</label>
-                                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd" class="form-label"
+                                    >Password:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd"
+                                    placeholder="Enter password"
+                                    name="pswd"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="mb-3">
-                                <label for="pwd check" class="form-label">Password check:</label>
-                                <input type="password" class="form-control" id="pwd check" placeholder="비밀번호 확인" name="pswd check" required>
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pwd check" class="form-label"
+                                    >Password check:</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="pwd check"
+                                    placeholder="비밀번호 확인"
+                                    name="pswd check"
+                                    required
+                                />
                                 <div class="valid-feedback">Valid.</div>
-                                <div class="invalid-feedback">Please fill out this field.</div>
-                              </div>
-                              <div class="form-row align-items-center">
+                                <div class="invalid-feedback">
+                                    Please fill out this field.
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center">
                                 <div class="col-sm-10 my-1">
-                                  <label class="form-label" for="email id">Email:</label>
-                                  <div class="input-group">
-                                    <input type="text" class="form-control" id="email id" placeholder="이메일 아이디" required>
-                                    <div class="input-group-prepend">
-                                      <div class="input-group-text">@</div>
-                                    </div>
-                                    <select id="domain" class="form-control">
-                                        <option selected>도메인 선택</option>
-                                        <option value="naver">naver.com</option>
-                                        <option value="google">gmail.com</option>
-                                        <option value="daum">daum.net</option>
-                                        <div class="valid-feedback">Valid.</div>
-                                        <div class="invalid-feedback">Please check this field.</div>
-                                    </select>
+                                    <label class="form-label" for="email id"
+                                        >Email:</label
+                                    >
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="email id"
+                                            placeholder="이메일 아이디"
+                                            required
+                                        />
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">
+                                                @
+                                            </div>
+                                        </div>
+                                        <select
+                                            id="domain"
+                                            class="form-control"
+                                        >
+                                            <option selected>
+                                                도메인 선택
+                                            </option>
+                                            <option value="naver">
+                                                naver.com
+                                            </option>
+                                            <option value="google">
+                                                gmail.com
+                                            </option>
+                                            <option value="daum">
+                                                daum.net
+                                            </option>
+                                            <div class="valid-feedback">
+                                                Valid.
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please check this field.
+                                            </div>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
                             <!--추가할 곳-->
                             <div class="form-row align-items-center">
                                 <div class="col-sm-10 my-1">
-                                    <label class="form-label" for="region">지역:</label>
-                                    <select id="regionselect" class="form-control">
+                                    <label class="form-label" for="region"
+                                        >지역:</label
+                                    >
+                                    <select
+                                        id="regionselect"
+                                        class="form-control"
+                                    >
                                         <option selected>시도선택</option>
-                                        <option value="seoul">서울특별시</option>
-                                        <option value="daejeon">대전광역시</option>
-                                        <option value="gumi">경상북도 구미시</option>
-                                        <option value="gwangju">광주광역시</option>
-                                        <option value="busan">부산광역시</option>
+                                        <option value="seoul">
+                                            서울특별시
+                                        </option>
+                                        <option value="daejeon">
+                                            대전광역시
+                                        </option>
+                                        <option value="gumi">
+                                            경상북도 구미시
+                                        </option>
+                                        <option value="gwangju">
+                                            광주광역시
+                                        </option>
+                                        <option value="busan">
+                                            부산광역시
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -315,13 +442,14 @@
 
                     <!-- Modal Footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary">회원가입</button>
+                        <button type="button" class="btn btn-outline-secondary">
+                            회원가입
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- [E] sign up modal-->
-
 
         <div style="height: 77px"></div>
 
@@ -609,16 +737,31 @@
                 <div class="col-lg-1"></div>
 
                 <!-- [S] right main content -->
-                <div class="col-lg-4">
+                <div class="col-lg-4 text-center">
                     <!-- 상단 이미지 -->
-                    <a href="#">
+
+                    <div class="card">
                         <img
                             src="./img/main-content-right-top.PNG"
-                            style="width: 100%"
-                            class="mb-lg-5"
-                            alt=""
+                            class="card-img"
+                            alt="..."
                         />
-                    </a>
+                        <div class="card-img-overlay">
+                            <div id="img_margin"></div>
+                            <button
+                                onclick="location.href='/template/hotple.html'"
+                                id="trip_btn"
+                                class="mb-3"
+                            ></button>
+                            <button
+                                onclick="location.href='/template/plan.html'"
+                                id="plan_btn"
+                            ></button>
+                        </div>
+                    </div>
+
+                    <!-- <button id="trip_btn"></button>
+                    <button id="plan_btn"></button> -->
 
                     <!-- 하단 이미지 -->
                     <div
@@ -716,8 +859,10 @@
                     <div
                         class="col-lg-1 h-100 text-center text-lg-start my-auto"
                     >
-                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
-                            target="_blank">
+                        <a
+                            href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
+                            target="_blank"
+                        >
                             <img
                                 class="px-4 px-lg-0"
                                 src="/img/logo-ssafy.png"
@@ -762,8 +907,10 @@
                         <div class="row">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.samsung.com/sec/"
-                                        target="_blank">
+                                    <a
+                                        href="https://www.samsung.com/sec/"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-samsung.png"
                                             alt=""
@@ -772,8 +919,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://api.visitkorea.or.kr/#/"
-                                        target="_blank">
+                                    <a
+                                        href="https://api.visitkorea.or.kr/#/"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-tour-api.png"
                                             alt=""
@@ -782,8 +931,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://kto.visitkorea.or.kr/kor.kto"
-                                        target="_blank">
+                                    <a
+                                        href="https://kto.visitkorea.or.kr/kor.kto"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-visited-kor.png"
                                             alt=""
@@ -792,8 +943,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.mcst.go.kr/kor/main.jsp"
-                                        target="_blank">
+                                    <a
+                                        href="https://www.mcst.go.kr/kor/main.jsp"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-mcst.png"
                                             alt=""

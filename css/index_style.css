@@ -28,6 +28,25 @@
     font-weight: 300;
     font-size: 1.2rem;
 }
+
+#trip_btn {
+    width: 88%;
+    height: 19%;
+    border: 0;
+    background-color: transparent !important;
+}
+#plan_btn {
+    width: 88%;
+    height: 19%;
+    border: 0;
+    background-color: transparent !important;
+}
+
+#img_margin {
+    width: 50%;
+    height: 47%;
+}
+
 @media (min-width: 992px) {
     .portfolio-item {
         max-width: none;
@@ -64,6 +83,7 @@
         clip-path: inset(2rem);
     }
 }
+
 @media (max-width: 768px) {
     .table_riches {
         display: none;
