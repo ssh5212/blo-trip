@@ -31,7 +31,12 @@
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/index_style.css" />
 
-        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16" />
+        <link
+            rel="icon"
+            href="/img/logo.ico"
+            type="image/x-icon"
+            sizes="16x16"
+        />
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -65,7 +70,10 @@
                 >
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div
+                    class="collapse navbar-collapse"
+                    id="navbarSupportedContent"
+                >
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item py-2" style="opacity: 80%">
                             <i class="fi fi-rr-marker ps-3"></i>
@@ -133,7 +141,9 @@
                                         >
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">회원가입</a>
+                                        <a class="dropdown-item" href="#"
+                                            >회원가입</a
+                                        >
                                     </li>
                                 </ul>
                             </li>
@@ -144,18 +154,91 @@
         </nav>
         <!-- [E] navbar -->
 
+        <!-- [S] map modal-->
+        <div
+            class="modal fade"
+            id="map_modal"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            <i class="fi fi-rr-star" id="map_modal_title"
+                                >${positions[i].title}</i
+                            >
+                        </h4>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                        ></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                    <div class="modal-body">
+                        <form action="" class="was-validated">
+                            <div class="mb-3 mt-3">
+                                <label for="ID" class="form-label">주소:</label>
+                                <p id="map_modal_addr">${positions[i].addr}</p>
+                            </div>
+                            <div class="mb-3">
+                                <img
+                                    id="map_modal_img"
+                                    src="${positions[i].image}"
+                                    alt=""
+                                    style="width: 100%"
+                                />
+                            </div>
+                            <div class="form-check mb-3">
+                                <label class="form-check-label">
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        name="remember"
+                                    />
+                                    Remember me
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal Footer -->
+                    <!-- <div class="modal-footer">
+                    <button type="submit" class="btn btn-outline-secondary">로그인</button>
+                    <button type="button" class="btn btn-outline-secondary">아이디 찾기</button>
+                    <button type="button" class="btn btn-outline-secondary">비밀번호 찾기</button>
+                </div> -->
+                </div>
+            </div>
+        </div>
+        <!-- [E] map modal-->
+
         <div id="nav_blank" style="height: 77px"></div>
 
         <!-- [S] content -->
         <div class="container">
             <div>
                 <h2
-                    style="font-family: 'Black Han Sans', sans-serif; opacity: 75%; font-size: 50px"
+                    style="
+                        font-family: 'Black Han Sans', sans-serif;
+                        opacity: 75%;
+                        font-size: 50px;
+                    "
                     class="m-0 mt-5"
                 >
                     관광 명소 검색
                 </h2>
-                <hr class="mb-3 mt-0" align="left" style="border: solid 3px brown; width: 50%" />
+                <hr
+                    class="mb-3 mt-0"
+                    align="left"
+                    style="border: solid 3px brown; width: 50%"
+                />
             </div>
             <!-- [S] 관광지 검색 -->
             <form class="d-flex my-3" onsubmit="return false;" role="search">
@@ -180,7 +263,13 @@
                     placeholder="검색어"
                     aria-label="검색어"
                 />
-                <button id="btn-search" class="btn btn-outline-success" type="button">검색</button>
+                <button
+                    id="btn-search"
+                    class="btn btn-outline-success"
+                    type="button"
+                >
+                    검색
+                </button>
             </form>
             <!-- kakao map start -->
             <div id="map" style="width: 100%; height: 400px"></div>
@@ -209,8 +298,13 @@
         <footer class="mt-auto">
             <div class="container justify-content-end align-items-center my-4">
                 <div class="row">
-                    <div class="col-lg-1 h-100 text-center text-lg-start my-auto">
-                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp" target="_blank">
+                    <div
+                        class="col-lg-1 h-100 text-center text-lg-start my-auto"
+                    >
+                        <a
+                            href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
+                            target="_blank"
+                        >
                             <img
                                 class="px-4 px-lg-0"
                                 src="/img/logo-ssafy.png"
@@ -219,15 +313,17 @@
                             />
                         </a>
                     </div>
-                    <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                    <div
+                        class="col-lg-6 h-100 text-center text-lg-start my-auto"
+                    >
                         <p class="text-muted small mb-4 mb-lg-0">
-                            대표 : KJH 주소: 98-39, Dongseo-daero, Yuseong-gu, Daejeon, Republic of
-                            Korea <br />
+                            대표 : KJH 주소: 98-39, Dongseo-daero, Yuseong-gu,
+                            Daejeon, Republic of Korea <br />
                             대표번호: 1588-3357 사업자번호 : 123-4567-987
                         </p>
                         <p class="text-muted small mb-4 mb-lg-0">
-                            &copy; Blossom Trip 2023. All Rights Reserved. &nbsp; ⋅ &nbsp; Designed
-                            by
+                            &copy; Blossom Trip 2023. All Rights Reserved.
+                            &nbsp; ⋅ &nbsp; Designed by
                             <a href="https://angelplayer.tistory.com">SSH</a> &
                             <a href="https://github.com/Holdm2t1ght">KJH</a>
                         </p>
@@ -236,22 +332,46 @@
                         <div class="row">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.samsung.com/sec/" target="_blank">
-                                        <img src="/img/logo-samsung.png" alt="" height="20px" />
+                                    <a
+                                        href="https://www.samsung.com/sec/"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="/img/logo-samsung.png"
+                                            alt=""
+                                            height="20px"
+                                        />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://api.visitkorea.or.kr/#/" target="_blank">
-                                        <img src="/img/logo-tour-api.png" alt="" height="20px" />
+                                    <a
+                                        href="https://api.visitkorea.or.kr/#/"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="/img/logo-tour-api.png"
+                                            alt=""
+                                            height="20px"
+                                        />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://kto.visitkorea.or.kr/kor.kto" target="_blank">
-                                        <img src="/img/logo-visited-kor.png" alt="" height="20px" />
+                                    <a
+                                        href="https://kto.visitkorea.or.kr/kor.kto"
+                                        target="_blank"
+                                    >
+                                        <img
+                                            src="/img/logo-visited-kor.png"
+                                            alt=""
+                                            height="20px"
+                                        />
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.mcst.go.kr/kor/main.jsp" target="_blank">
+                                    <a
+                                        href="https://www.mcst.go.kr/kor/main.jsp"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-mcst.png"
                                             alt=""
@@ -267,60 +387,6 @@
             </div>
         </footer>
         <!-- [E] footer -->
-
-        <!-- [S] map modal-->
-        <div
-            class="modal fade"
-            id="mapModal"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">
-                            <i class="fi fi-rr-star" id="map_modal_title">${positions[i].title}</i>
-                        </h4>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-
-                    <!-- Modal Body -->
-                    <div class="modal-body">
-                        <form action="" class="was-validated">
-                            <div class="mb-3 mt-3">
-                                <label for="ID" class="form-label">주소:</label>
-                                <p id="map_modal_addr">${positions[i].addr}</p>
-                            </div>
-                            <div class="mb-3">
-                                <img id="map_modal_img" src="${positions[i].image}" alt="" style="width: 100%" />
-                            </div>
-                            <div class="form-check mb-3">
-                                <label class="form-check-label">
-                                    <input
-                                        class="form-check-input"
-                                        type="checkbox"
-                                        name="remember"
-                                    />
-                                    Remember me
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Modal Footer -->
-                    <!-- <div class="modal-footer">
-                    <button type="submit" class="btn btn-outline-secondary">로그인</button>
-                    <button type="button" class="btn btn-outline-secondary">아이디 찾기</button>
-                    <button type="button" class="btn btn-outline-secondary">비밀번호 찾기</button>
-                </div> -->
-                </div>
-            </div>
-        </div>
-        <!-- [E] map modal-->
 
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"

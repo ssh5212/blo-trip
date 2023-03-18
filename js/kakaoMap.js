@@ -1,36 +1,35 @@
 let contentTypeId = 0; // 0이면 다 고르는 것
 
 // 검색 버튼 눌렸을 때 실행
-document.getElementById("btn-search").addEventListener("click", () => {
+document.getElementById('btn-search').addEventListener('click', () => {
     // 검색 기본 url
     let searchUrl = `https://apis.data.go.kr/B551011/KorService1/searchKeyword1?serviceKey=${serviceKey}&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&_type=json&listYN=Y&arrange=A`;
 
     // 추가 검색 속성값 적용
-    let areaCode = document.getElementById("search-area").value;
-    contentTypeId = document.getElementById("search-content-id").value;
+    let areaCode = document.getElementById('search-area').value;
+    contentTypeId = document.getElementById('search-content-id').value;
     // console.log("contentT" + contentTypeId);
-    let keyword = document.getElementById("search-keyword").value;
+    let keyword = document.getElementById('search-keyword').value;
 
     if (parseInt(areaCode)) searchUrl += `&areaCode=${areaCode}`;
     if (parseInt(contentTypeId)) searchUrl += `&contentTypeId=${contentTypeId}`;
     if (!keyword) {
-        alert("검색어 입력 필수!!!");
+        alert('검색어 입력 필수!!!');
         return;
     } else searchUrl += `&keyword=${keyword}`;
 
     fetch(searchUrl)
-        .then((response) => response.json())
-        .then((data) => makeList(data));
+        .then(response => response.json())
+        .then(data => makeList(data));
 });
 
 var positions; // marker 배열.
 function makeList(data) {
-
-    document.querySelector("table").setAttribute("style", "display: ;");
+    document.querySelector('table').setAttribute('style', 'display: ;');
     let trips = data.response.body.items.item;
     let tripList = ``;
     positions = [];
-    trips.forEach((area) => {
+    trips.forEach(area => {
         // console.log(area);
         tripList += `
                     <tr onclick="moveCenter(${area.mapy}, ${area.mapx});">
@@ -52,12 +51,12 @@ function makeList(data) {
         };
         positions.push(markerInfo);
     });
-    document.getElementById("trip-list").innerHTML = tripList;
+    document.getElementById('trip-list').innerHTML = tripList;
     displayMarker();
 }
 
 // 카카오지도
-var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div
     mapOption = {
         center: new kakao.maps.LatLng(37.500613, 127.036431), // 지도의 중심좌표
         level: 5, // 지도의 확대 레벨
@@ -68,36 +67,49 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 function displayMarker() {
     // 마커 이미지의 이미지 주소입니다
-    
+
     for (var i = 0; i < positions.length; i++) {
+        let position_name = positions[i].title;
+        let position_address = positions[i].addr1;
+        let position_image = positions[i].image;
         // 마커 이미지의 이미지 크기 입니다
         var imageSize = new kakao.maps.Size(24, 24);
-        
+
         // 마커 이미지 고르기
-        var imageSrc =
-            `/img/marker_${positions[i].contenttypeid}.png`;
+        var imageSrc = `/img/marker_${positions[i].contenttypeid}.png`;
 
         // 마커 이미지를 생성합니다
         var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
 
-        //////////////// error
-        console.log();
-
+        // 유형이 선택되지 않았으면 continue;
         if (contentTypeId != 0 && contentTypeId != positions[i].contenttypeid) {
             continue;
         }
-        
+
         // 마커를 생성합니다
         var marker = new kakao.maps.Marker({
             map: map, // 마커를 표시할 지도
             position: positions[i].latlng, // 마커를 표시할 위치
-            title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+            title: positions[i].title, // 마커의 타이틀
             image: markerImage, // 마커 이미지
         });
-        kakao.map.event.addEventListener("click", marker, () => {
-            querySelector("#map_modal_title").innerText(positions[i].title);
-            querySelector("#map_modal_addr").innerText(positions[i].addr);
-            querySelector("#map_modal_img").src(positions[i].image);
+
+        // 마커 선택 시 토글 활성화
+        kakao.maps.event.addListener(marker, 'click', () => {
+            document.querySelector('#map_modal_title').innerText =
+                position_name;
+            document.querySelector('#map_modal_addr').innerText =
+                position_address;
+            document.querySelector('#map_modal_img').src = position_image;
+            console.log(document.querySelector('#map_modal'));
+
+            var myModal = new bootstrap.Modal(
+                document.getElementById('map_modal'),
+                {
+                    keyboard: false,
+                }
+            );
+            myModal.toggle();
         });
     }
 
@@ -110,11 +122,11 @@ function moveCenter(lat, lng) {
 }
 
 //////////////////////// 클러스터러 만들기
-// // 마커 클러스터러를 생성합니다 
+// // 마커 클러스터러를 생성합니다
 // var clusterer = new kakao.maps.MarkerClusterer({
-//     map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
-//     averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
-//     minLevel: 10 // 클러스터 할 최소 지도 레벨 
+//     map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체
+//     averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
+//     minLevel: 10 // 클러스터 할 최소 지도 레벨
 // });
 
 // // 데이터를 가져오기 위해 jQuery를 사용합니다
