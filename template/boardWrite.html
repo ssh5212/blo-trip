@@ -31,7 +31,12 @@
         <link rel="stylesheet" href="/css/style.css" />
         <link rel="stylesheet" href="/css/index_style.css" />
 
-        <link rel="icon" href="/img/logo.ico" type="image/x-icon" sizes="16x16">
+        <link
+            rel="icon"
+            href="/img/logo.ico"
+            type="image/x-icon"
+            sizes="16x16"
+        />
 
         <title>Blossom Trip</title>
     </head>
@@ -149,34 +154,66 @@
         <div class="container">
             <div>
                 <h2
-                    style="font-family: 'Black Han Sans', sans-serif; opacity: 75%; font-size: 50px"
+                    style="
+                        font-family: 'Black Han Sans', sans-serif;
+                        opacity: 75%;
+                        font-size: 50px;
+                    "
                     class="m-0 mt-5"
                 >
                     여행 정보 공유
                 </h2>
-                <hr class="mb-3 mt-0" align="left" style="border: solid 3px brown; width: 50%" />
+                <hr
+                    class="mb-3 mt-0"
+                    align="left"
+                    style="border: solid 3px brown; width: 50%"
+                />
             </div>
             <form action="">
                 <div class="mb-3 mt-3">
                     <label for="name" class="form-label">작성자 ID: </label>
-                    <input type="text" class="form-control" id="writeUser" placeholder="ID를 입력하세요" name="name">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="writeUser"
+                        placeholder="ID를 입력하세요"
+                        name="name"
+                    />
                 </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">제목: </label>
-                    <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요" name="title">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="title"
+                        placeholder="제목을 입력하세요"
+                        name="title"
+                    />
                 </div>
                 <div class="mb-3">
                     <label for="comment" class="form-label">내용:</label>
-                    <textarea class="form-control" rows="5" id="comment" name="text" placeholder="내용을 입력하세요"></textarea>
+                    <textarea
+                        class="form-control"
+                        rows="5"
+                        id="comment"
+                        name="text"
+                        placeholder="내용을 입력하세요"
+                    ></textarea>
                 </div>
             </form>
-            
+
             <div class="col text-center">
+                <button
+                    type="button"
+                    class="btn btn-outline-secondary"
+                    onclick="location.href='/template/boardResult.html'"
+                >
+                    글작성
+                </button>
                 <button type="button" class="btn btn-outline-secondary">
-                    <a href="/template/boardResult.html">글작성</a></button>
-                <button type="button" class="btn btn-outline-secondary">초기화</button>
+                    초기화
+                </button>
             </div>
-            
         </div>
 
         <!-- [E] content -->
@@ -188,8 +225,10 @@
                     <div
                         class="col-lg-1 h-100 text-center text-lg-start my-auto"
                     >
-                        <a href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
-                            target="_blank">
+                        <a
+                            href="https://www.ssafy.com/ksp/jsp/swp/swpMain.jsp"
+                            target="_blank"
+                        >
                             <img
                                 class="px-4 px-lg-0"
                                 src="/img/logo-ssafy.png"
@@ -234,8 +273,10 @@
                         <div class="row">
                             <ul class="list-inline mb-0">
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.samsung.com/sec/"
-                                        target="_blank">
+                                    <a
+                                        href="https://www.samsung.com/sec/"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-samsung.png"
                                             alt=""
@@ -244,8 +285,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://api.visitkorea.or.kr/#/"
-                                        target="_blank">
+                                    <a
+                                        href="https://api.visitkorea.or.kr/#/"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-tour-api.png"
                                             alt=""
@@ -254,8 +297,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://kto.visitkorea.or.kr/kor.kto"
-                                        target="_blank">
+                                    <a
+                                        href="https://kto.visitkorea.or.kr/kor.kto"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-visited-kor.png"
                                             alt=""
@@ -264,8 +309,10 @@
                                     </a>
                                 </li>
                                 <li class="list-inline-item me-4">
-                                    <a href="https://www.mcst.go.kr/kor/main.jsp"
-                                        target="_blank">
+                                    <a
+                                        href="https://www.mcst.go.kr/kor/main.jsp"
+                                        target="_blank"
+                                    >
                                         <img
                                             src="/img/logo-mcst.png"
                                             alt=""
